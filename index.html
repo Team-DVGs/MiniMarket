@@ -1,591 +1,295 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Mini Market</title>
-        <link rel="stylesheet" href="./assets/css/main.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <!-- Phần navigation và footer viết riêng ở ngoài, các phần khác viết trong
-        div container  -->
-
-        <!-- Navigation, header -->
-        <div class="nav">
-            <div class = "top-bar">
-                <div class = "top-bar-left">
-                    <a href="#!"><span>About Us</span></a>
-                    <a href="#!"><span>My Account</span></a>
-                    <a href="#!"><span>Wishlist</span></a>
-                    <a href="#!"><span>Order Tracking</span></a>
-                </div>
-                <div class = "top-bar-center">
-                    <p>100% Secure delivery without contacting the courier</p>
-                </div>
-                <div class = "top-bar-right">
-                    <span class="seperator">Need help? Call Us:+ 1800 900</span>
-                    <form action="" style="display: inline;">
-                        <div class="seperator" style="display: inline-block;">
-                            <select name="language" id="language">
-                                <option value="english" selected>English </option>
-                                <option value="vietnamese">Tiếng Việt</option>
-                            </select>
-                        </div>
-                        <select name="currency" id="currency">
-                            <option value="usd" selected>
-                                <img src="./assets/img/america-flag.jpg" alt="america flag" width="20" height="15">
-                                USD
-                            </option>
-                            <option value="vnd">
-                                <img src="./assets/img/vietnam-flag.jpg" alt="vietnam flag" width="20" height="15">
-                                VND
-                            </option>
-                        </select>
-                    </form>
-                </div>
-            </div>
-            <header>
-                <div class="header-inner">
-                    <div class="header-inner-left">
-                        <form action="https://www.google.com/search" method="GET" class="search-bar">
-                            <input type="text" name="q" id = "search-product" placeholder="Search for product" autocomplete="off">
-                            <button type="submit">
-                                <img width="23" height="23" src="https://img.icons8.com/ios/50/search--v1.png" alt="search--v1"/>
-                            </button>
-                        </form>
-                    </div>
-                    <div class="header-inner-center">
-                        <a href="index.html">
-                            <img src="./assets/img/brand-logo.png" alt="Green Mart logo" width="144">
-                        </a>
-                    </div>
-                    <div class="header-inner-right">
-                        <a href="#!">
-                            <i class="header-inner-right-icon fa-solid fa-scale-unbalanced"></i>
-                            <span>Compare</span>
-                        </a>
-                        <a href="#!">
-                            <i class="header-inner-right-icon fa-regular fa-heart"></i>
-                            <span>Wishlist</span>
-                        </a>
-                        <a href="#!">
-                            <i class="header-inner-right-icon fa-solid fa-cart-shopping"></i>
-                            <span>Cart</span>
-                        </a>
-                        <a href="#!">
-                            <i class="header-inner-right-icon fa-regular fa-user"></i>
-                            <span>Login</span>
-                        </a>
-                    </div>
-                </div>
-                <nav class = nav-bar>
-                    <ul class="header-navigation">
-                        <li class="menu-item">
-                            <a class="menu-item-link" href="#!">
-                                <span class="menu-text">Home</span>
-                                <i class="menu-arrow fa-solid fa-chevron-down"></i>
-                            </a>
-                            <ul class = "sub-menu">
-                                <li><a href="#!">Home 1</a></li>
-                                <li><a href="#!">Home 2</a></li>
-                                <li><a href="#!">Home 3</a></li>
-                                <li><a href="#!">Home 4</a></li>
-                                <li><a href="#!">Home 5</a></li>
-                                <li><a href="#!">Home 6</a></li>
-                                <li><a href="#!">Home 7</a></li>
-                                <li><a href="#!">Home 8</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a class="menu-item-link" href="#!">
-                                <span class="menu-text">Blog</span>
-                                <i class="menu-arrow fa-solid fa-chevron-down"></i>
-                            </a>
-                            <ul class="sub-menu">
-                                <li><a href="#!">Blog Category Grid</a></li>
-                                <li><a href="#!">Blog Category List</a></li>
-                                <li>
-                                    <a href="#!">
-                                        <span>Blog Category Big</span>
-                                        <i class="menu-arrow fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <ul class = "sub-menu sub-menu--sub">
-                                        <li><a href="#!">Blog 1</a></li>
-                                        <li><a href="#!">Blog 2</a></li>
-                                        <li><a href="#!">Blog 3</a></li>
-                                        <li><a href="#!">Blog 4</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#!">Blog Category Wide</a></li>
-                                <li>
-                                    <a href="#!">
-                                        <span>Single Post</span>
-                                        <i class="menu-arrow fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <ul class = "sub-menu sub-menu--sub">
-                                        <li><a href="#!">Left Sidebar</a></li>
-                                        <li><a href="#!">Right Sidebar</a></li>
-                                        <li><a href="#!">No Sidebar</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a class="menu-item-link" href="#!">
-                                <span class="menu-text">Mega menu</span>
-                                <i class="menu-arrow fa-solid fa-chevron-down"></i>
-                            </a>
-                            <ul class="sub-menu sub-menu--mega">
-                                <li>
-                                    <a href="#!">Fruit & Vegetables</a>
-                                    <ul>
-                                        <li><a href="#!">Meat & Poultry</a></li>
-                                        <li><a href="#!">Fresh Vegetables</a></li>
-                                        <li><a href="#!">Herbs & Seasonings</a></li>
-                                        <li><a href="#!">Cuts & Sprouts</a></li>
-                                        <li><a href="#!">Exotic Fruits & Veggies</a></li>
-                                        <li><a href="#!">Packaged Produce</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#!">Breakfast & Dairy</a>
-                                    <ul>
-                                        <li><a href="#!">Milk & Flavoured Milk</a></li>
-                                        <li><a href="#!">Butter and Margarine</a></li>
-                                        <li><a href="#!">Eggs Substitutes</a></li>
-                                        <li><a href="#!">Marmalades</a></li>
-                                        <li><a href="#!">Sour Cream</a></li>
-                                        <li><a href="#!">Cheese</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#!">Meat & Seafood</a>
-                                    <ul>
-                                        <li><a href="#!">Breakfast Sausage</a></li>
-                                        <li><a href="#!">Dinner Sausage</a></li>
-                                        <li><a href="#!">Chicken</a></li>
-                                        <li><a href="#!">Sliced Deli Meat</a></li>
-                                        <li><a href="#!">Wild Caught Fillets</a></li>
-                                        <li><a href="#!">Crab and Shellfish</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#!">
-                                        <img src="//boostify-nesst.myshopify.com/cdn/shop/files/mega-banner.jpg?v=1661418799&amp;width=540" width="508px" height="322px">
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item">
-                            <a class="menu-item-link" href="#!">
-                                <i class="menu-fire fa-solid fa-fire"></i>
-                                <span class="menu-text">Deals</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a class="menu-item-link" href="#!">
-                                <span class="menu-text">Contact</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ecommerce Website</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div class="tabs-head">
+				
+        <div class="title-section">
+            <h2 class="heading-font-family">Popular Products</h2>
         </div>
 
+        <div class="right-spans">
+            <span>All</span>
+            <span>Milk&Diaries</span>
+            <span>Coffee&Tea</span>
+            <span>Pet Food</span>
+            <span>Meat</span>
+            <span>Vegetable</span>
+            <span>Food</span>
+        </div>
+    
+    </div>
 
-        <div class="container">
-            <!-- Banner -->
 
+    <ul class="product-list">
+        <div class="product">
+            <div>
+                <img class="product_img" src="./assets/img/product2.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Hoa quả nhiệt đới hbui jahbf jhb</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐ (4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
+    
+            <div>
+                <img class="product_img" src="./assets/img/product3.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐ (4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
 
-            <!-- Deals of the day -->
-            <div class="deals">
-                <div class="mb-2 d-flex align-items-center">
-                    <h2>Deals of the day</h2>
-                    <a href="#" class="fs-5 text-decoration-none text-secondary ms-auto">All deals</a>
-                </div>
-                <ul class="row deals__list list-unstyled">
-                    <li class="col-3 deals__item text-center">
-                        <div class="deals__item-img rounded-5" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/product-17.jpg?v=1659061200&width=360);"></div>
-                        <div class="deals__item-info hover-animation text-start">
-                            <a href="#" class="mb-5 text-decoration-none fw-semibold text-decoration-none">Seeds of Change Organic Quinoa Rice</a>
-                            <div class="deals__item-rating mb-2">
-                                <span class="text-warning">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                                <span class="text-secondary ms-2">(50)</span>
-                            </div>
-                            <div class="deals__item-price mb-3">
-                                <span class="deals__item-price-first">$52.85</span>
-                                <span class="deals__item-price-second">$55.80</span>
-                            </div>
-                            <button class="btn btn-success ">
-                                <i class="fa-solid fa-cart-shopping"></i> Add to cart
-                            </button>
-                        </div>
-                    </li>
-                    <li class="col-3 deals__item text-center">
-                        <div class="deals__item-img rounded-5" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/product-18.jpg?v=1659061233&width=360);"></div>
-                        <div class="deals__item-info hover-animation text-start">
-                            <a href="#" class="mb-5 text-decoration-none fw-semibold text-decoration-none">Perdue Simply Smart Organics Gluten Free</a>
-                            <div class="deals__item-rating mb-2">
-                                <span class="text-warning">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                                <span class="text-secondary ms-2">(50)</span>
-                            </div>
-                            <div class="deals__item-price mb-3">
-                                <span class="deals__item-price-first">$34.85</span>
-                                <span class="deals__item-price-second">$6.80</span>
-                            </div>
-                            <button class="btn btn-success ">
-                                <i class="fa-solid fa-cart-shopping"></i> Add to cart
-                            </button>
-                        </div>
-                    </li>
-                    <li class="col-3 deals__item text-center">
-                        <div class="deals__item-img rounded-5" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/product-19.jpg?v=1659061273&width=360);"></div>
-                        <div class="deals__item-info hover-animation text-start">
-                            <a href="#" class="mb-5 text-decoration-none fw-semibold text-decoration-none">Signature Wood-Fired Mushroom Meals</a>
-                            <div class="deals__item-rating mb-2">
-                                <span class="text-warning">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                                <span class="text-secondary ms-2">(50)</span>
-                            </div>
-                            <div class="deals__item-price mb-3">
-                                <span class="deals__item-price-first">$12.85</span>
-                                <span class="deals__item-price-second">$14.70</span>
-                            </div>
-                            <button class="btn btn-success ">
-                                <i class="fa-solid fa-cart-shopping"></i> Add to cart
-                            </button>
-                        </div>
-                    </li>
-                    <li class="col-3 deals__item text-center">
-                        <div class="deals__item-img rounded-5" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/product-20.jpg?v=1659061316&width=360);"></div>
-                        <div class="deals__item-info hover-animation text-start">
-                            <a href="#" class="mb-5 text-decoration-none fw-semibold text-decoration-none">Simply Lemonade with Raspberry Juice</a>
-                            <div class="deals__item-rating mb-2">
-                                <span class="text-warning">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                                <span class="text-secondary ms-2">(50)</span>
-                            </div>
-                            <div class="deals__item-price mb-3">
-                                <span class="deals__item-price-first">$15.85</span>
-                                <span class="deals__item-price-second">$17.80</span>
-                            </div>
-                            <button class="btn btn-success ">
-                                <i class="fa-solid fa-cart-shopping"></i> Add to cart
-                            </button>
-                        </div>
-                    </li>
+            <div>
+                <img class="product_img" src="./assets/img/product4.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐ (4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
+
+            <div>
+                <img class="product_img" src="./assets/img/product5.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐ (4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
+
+            <div>
+                <img class="product_img" src="./assets/img/product6.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐ (4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
+        </div>
+    </ul>
+
+    <ul class="product-list">
+        <div class="product">
+            <div>
+                <img class="product_img" src="./assets/img/product7.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐ (4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
+    
+            <div>
+                <img class="product_img" src="./assets/img/product2.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐ (4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
+
+            <div>
+                <img class="product_img" src="./assets/img/product5.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐(4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
+
+            <div>
+                <img class="product_img" src="./assets/img/product3.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐(4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
                     
                 </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
+
+            <div>
+                <img class="product_img" src="./assets/img/product4.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐(4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
+        </div>
+    </ul>
+
+
+    <div class="tabs-head">
+				
+        <div class="title-section">
+            <h2 class="heading-font-family">Daily Best Sell</h2>
+        </div>
+
+        <div class="right-spans">
+            <span>Feature</span>
+            <span>Popular</span>
+            <span>New Added</span>
+        </div>
+    </div>
+
+    <ul class="product-list">
+        <div class="product">
+            <div class="sale">
+                <p class="sale-announce">Bring nature into your home</p>
+               
+                <button class="sale-button">Shop now<span class="arrow"></span></button>
+            </div>
+            <div class="sale-product">
+                <img class="product_img" src="./assets/img/product2.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Hoa quả nhiệt đới hbui jahbf jhb</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐ (4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
     
+            <div class="sale-product">
+                <img class="product_img" src="./assets/img/product6.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐ (4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
+                    </div>
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
             </div>
-            <!-- Trending -->
-            <div class="trending">
-                <div class="row">
-                    <div class="col-4">
-                        <h3 class="mx-0 mb-3 py-3 trending__header">Top Selling</h3>
-                        <ul class="list-unstyled">
-                            <li class="trending__item text-center d-flex row g-0 hover-animation">
-                                <div class="col-3">
-                                    <div class="trending__item-img rounded-4" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/product-19.jpg?v=1659061273&width=360);"></div>
-                                </div>
-                                <div class="col-9 trending__item-info text-start px-3 d-flex flex-column justify-content-center align-items-start">
-                                    <a href="#" class="text-decoration-none fw-semibold text-decoration-none">Signature Wood-Fired Mushroom Meals</a>
-                                    <div class="trending__item-rating my-1">
-                                        <span class="text-warning">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="text-secondary ms-2">(50)</span>
-                                    </div>
-                                    <div class="deals__item-price mb-3">
-                                        <span class="deals__item-price-first">$12.85</span>
-                                        <span class="deals__item-price-second">$14.70</span>
-                                    </div>
-                                </div>
-                            </li>   
 
-                            <li class="trending__item text-center d-flex row g-0 hover-animation">
-                                <div class="col-3">
-                                    <div class="trending__item-img rounded-4" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/thumbnail-5.jpg?v=1663128373&width=360);"></div>
-                                </div>
-                                <div class="col-9 trending__item-info text-start px-3 d-flex flex-column justify-content-center align-items-start">
-                                    <a href="#" class="text-decoration-none fw-semibold text-decoration-none">Seeds of Change Brown & Red Rice</a>
-                                    <div class="trending__item-rating my-1">
-                                        <span class="text-warning">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="text-secondary ms-2">(50)</span>
-                                    </div>
-                                    <div class="deals__item-price mb-3">
-                                        <span class="deals__item-price-first">$72.85</span>
-                                        <span class="deals__item-price-second">$74.70</span>
-                                    </div>
-                                </div>
-                            </li> 
-                            <li class="trending__item text-center d-flex row g-0 hover-animation">
-                                <div class="col-3">
-                                    <div class="trending__item-img rounded-4" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/product-4-1_aa3fe939-3988-4fdd-856f-66a66c8e63aa.jpg?v=1663051858&width=360);"></div>
-                                </div>
-                                <div class="col-9 trending__item-info text-start px-3 d-flex flex-column justify-content-center align-items-start">
-                                    <a href="#" class="text-decoration-none fw-semibold text-decoration-none">Sahale Asias Sesame Edamame Snacks</a>
-                                    <div class="trending__item-rating my-1">
-                                        <span class="text-warning">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="text-secondary ms-2">(50)</span>
-                                    </div>
-                                    <div class="deals__item-price mb-3">
-                                        <span class="deals__item-price-first">$72.85</span>
-                                        <span class="deals__item-price-second">$74.70</span>
-                                    </div>
-                                </div>
-                            </li> 
-                        </ul>
+            <div class="sale-product">
+                <img class="product_img" src="./assets/img/product4.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐ (4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
                     </div>
-                    <div class="col-4">
-                        <h3 class="mx-0 mb-3 py-3 trending__header">Trending Products</h3>
-                        <ul class="list-unstyled">
-                            <li class="trending__item text-center d-flex row g-0 hover-animation">
-                                <div class="col-3">
-                                    <div class="trending__item-img rounded-4" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/product-19.jpg?v=1659061273&width=360);"></div>
-                                </div>
-                                <div class="col-9 trending__item-info text-start px-3 d-flex flex-column justify-content-center align-items-start">
-                                    <a href="#" class="text-decoration-none fw-semibold text-decoration-none">Signature Wood-Fired Mushroom Meals</a>
-                                    <div class="trending__item-rating my-1">
-                                        <span class="text-warning">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="text-secondary ms-2">(50)</span>
-                                    </div>
-                                    <div class="deals__item-price mb-3">
-                                        <span class="deals__item-price-first">$12.85</span>
-                                        <span class="deals__item-price-second">$14.70</span>
-                                    </div>
-                                </div>
-                            </li>   
+                </ul>
+                <button class="shopping-button" role="button" style="font-size:16px"><span class="text">Add to cart</span><i class="fa fa-shopping-cart"></i></button>
+            </div>
 
-                            <li class="trending__item text-center d-flex row g-0 hover-animation">
-                                <div class="col-3">
-                                    <div class="trending__item-img rounded-4" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/thumbnail-5.jpg?v=1663128373&width=360);"></div>
-                                </div>
-                                <div class="col-9 trending__item-info text-start px-3 d-flex flex-column justify-content-center align-items-start">
-                                    <a href="#" class="text-decoration-none fw-semibold text-decoration-none">Seeds of Change Brown & Red Rice</a>
-                                    <div class="trending__item-rating my-1">
-                                        <span class="text-warning">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="text-secondary ms-2">(50)</span>
-                                    </div>
-                                    <div class="deals__item-price mb-3">
-                                        <span class="deals__item-price-first">$72.85</span>
-                                        <span class="deals__item-price-second">$74.70</span>
-                                    </div>
-                                </div>
-                            </li> 
-                            <li class="trending__item text-center d-flex row g-0 hover-animation">
-                                <div class="col-3">
-                                    <div class="trending__item-img rounded-4" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/product-4-1_aa3fe939-3988-4fdd-856f-66a66c8e63aa.jpg?v=1663051858&width=360);"></div>
-                                </div>
-                                <div class="col-9 trending__item-info text-start px-3 d-flex flex-column justify-content-center align-items-start">
-                                    <a href="#" class="text-decoration-none fw-semibold text-decoration-none">Sahale Asias Sesame Edamame Snacks</a>
-                                    <div class="trending__item-rating my-1">
-                                        <span class="text-warning">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="text-secondary ms-2">(50)</span>
-                                    </div>
-                                    <div class="deals__item-price mb-3">
-                                        <span class="deals__item-price-first">$72.85</span>
-                                        <span class="deals__item-price-second">$74.70</span>
-                                    </div>
-                                </div>
-                            </li> 
-                        </ul>
+            <div class="sale-product">
+                <img class="product_img" src="./assets/img/product5.jpg" alt="Product 1">
+                <span class="discount-label">10% off</span>
+                <ul class="product-info">
+                    <li class="category">Category</li>
+                    <li class="availability">In Stock</li>
+                    <li class="product-name">Product Name</li>
+                    <li class="rating">⭐⭐⭐⭐ (4.0)</li>
+                    <div class="div-price">
+                        <li class="price">$50.00</li>
+                        <s class="regular-price">$80.00</s>
                     </div>
-                    <div class="col-4">
-                        <h3 class="mx-0 mb-3 py-3 trending__header">Recently added</h3>
-                        <ul class="list-unstyled">
-                            <li class="trending__item text-center d-flex row g-0 hover-animation">
-                                <div class="col-3">
-                                    <div class="trending__item-img rounded-4" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/product-19.jpg?v=1659061273&width=360);"></div>
-                                </div>
-                                <div class="col-9 trending__item-info text-start px-3 d-flex flex-column justify-content-center align-items-start">
-                                    <a href="#" class="text-decoration-none fw-semibold text-decoration-none">Signature Wood-Fired Mushroom Meals</a>
-                                    <div class="trending__item-rating my-1">
-                                        <span class="text-warning">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="text-secondary ms-2">(50)</span>
-                                    </div>
-                                    <div class="deals__item-price mb-3">
-                                        <span class="deals__item-price-first">$12.85</span>
-                                        <span class="deals__item-price-second">$14.70</span>
-                                    </div>
-                                </div>
-                            </li>   
+                </ul>
+                <button class="shopping-button" style="font-size:16px">Add to cart <i class="fa fa-shopping-cart"></i></button>
+            </div>
 
-                            <li class="trending__item text-center d-flex row g-0 hover-animation">
-                                <div class="col-3">
-                                    <div class="trending__item-img rounded-4" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/thumbnail-5.jpg?v=1663128373&width=360);"></div>
-                                </div>
-                                <div class="col-9 trending__item-info text-start px-3 d-flex flex-column justify-content-center align-items-start">
-                                    <a href="#" class="text-decoration-none fw-semibold text-decoration-none">Seeds of Change Brown & Red Rice</a>
-                                    <div class="trending__item-rating my-1">
-                                        <span class="text-warning">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="text-secondary ms-2">(50)</span>
-                                    </div>
-                                    <div class="deals__item-price mb-3">
-                                        <span class="deals__item-price-first">$72.85</span>
-                                        <span class="deals__item-price-second">$74.70</span>
-                                    </div>
-                                </div>
-                            </li> 
-                            <li class="trending__item text-center d-flex row g-0 hover-animation">
-                                <div class="col-3">
-                                    <div class="trending__item-img rounded-4" style="background-image: url(https://boostify-nesst.myshopify.com/cdn/shop/products/product-4-1_aa3fe939-3988-4fdd-856f-66a66c8e63aa.jpg?v=1663051858&width=360);"></div>
-                                </div>
-                                <div class="col-9 trending__item-info text-start px-3 d-flex flex-column justify-content-center align-items-start">
-                                    <a href="#" class="text-decoration-none fw-semibold text-decoration-none">Sahale Asias Sesame Edamame Snacks</a>
-                                    <div class="trending__item-rating my-1">
-                                        <span class="text-warning">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                        <span class="text-secondary ms-2">(50)</span>
-                                    </div>
-                                    <div class="deals__item-price mb-3">
-                                        <span class="deals__item-price-first">$72.85</span>
-                                        <span class="deals__item-price-second">$74.70</span>
-                                    </div>
-                                </div>
-                            </li> 
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Email form -->
-            <div class="mailform d-flex p-5">
-                <div class="mailform__info my-auto">
-                    <h1 class="mb-3">Stay home and get your daily needs from our shop</h1>
-                    <p class="text-secondary fw-italic mb-3">Need help? Contact hotline: 18001091</p>
-                    <div class="mailform__box">
-                        <i class="fa-solid fa-paper-plane mx-2 texts text-secondary"></i>
-                        <input type="text" class="mailform__box-input ms-1" placeholder="Email">
-                        <button class="mailform__box-btn">Subscribe</button>
-                    </div>
-                </div>
-                
-            </div>
-            <!-- Features -->
-            <div class="features mt-4">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="features__item px-3 py-4 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-tag"></i>
-                            <div class="my-auto">
-                                <p class="fw-bold m-0 text-center">Best prices and offers</p>
-                                <p class="m-0 text-secondary fw-italic text-center">Order $50 or more</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="features__item px-3 py-4 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-handshake"></i>
-                            <div class="my-auto">
-                                <p class="fw-bold m-0 text-center">Free Delivery</p>
-                                <p class="m-0 text-secondary fw-italic text-center">24/7 amazing services</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="features__item px-3 py-4 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-shield"></i>
-                            <div class="my-auto">
-                                <p class="fw-bold m-0 text-center">Quality Secure</p>
-                                <p class="m-0 text-secondary fw-italic text-center">Ensure the best products</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="features__item px-3 py-4 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-bolt-lightning"></i>
-                            <div class="my-auto">
-                                <p class="fw-bold m-0 text-center">Fast forward</p>
-                                <p class="m-0 text-secondary fw-italic text-center">Quick response and delivery</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
+    </ul>
 
+    
+ 
 
-        <!-- Footer -->
-        <div class="footer w-100 text-center py-3 mt-3" >
-            2023@ Designed by DVGs
-        </div>
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    </body>
+    
+</body>
 </html>
