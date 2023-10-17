@@ -534,7 +534,7 @@ h2 {
     list-style-type: none;
     padding: 0;
     display: flex; /* Make it a flex container */
-    justify-content: space-between; /* Add space between products */
+    justify-content: center; /* Add space between products */
 }
 
 .product {
