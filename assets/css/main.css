@@ -377,8 +377,9 @@
     color: var(--text);
 }
 
-.menu-item-link:hover,
-.menu-item-link:hover .menu-fire {
+.menu-item:hover .menu-item-link,
+.menu-item:hover .menu-fire,
+.sub-menu > li:hover > a {
     color: var(--green-text);
     transition: color 0.2s ease-out;
 }
@@ -415,13 +416,16 @@
     display: block;
     visibility: hidden;
     opacity: 0;
+    transform: translateY(20px);
+    transition: all ease-out 0.2s;
 }
 
 /* ! Quan trong cua sub menu */
-.menu-item:hover > .sub-menu,
-.sub-menu > li:hover > .sub-menu {
+.menu-item:hover > .sub-menu {
     visibility: visible;
     opacity: 1;
+    transform: translateY(0);
+    transition: all ease-in 0.3s;
 }
 
 .sub-menu li a {
@@ -443,24 +447,48 @@
 }
 
 .sub-menu--sub {
-    top: 0;
+    top: -20px;
     left: 95%;
     box-shadow: -7px -5px 0.5rem #00000025;
+    transform: translateX(10px);
+}
+
+li:hover > .sub-menu--sub {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all ease-in 0.3s;
 }
 
 .sub-menu--mega {
     display: flex;
     width: 90vw;
     left: -375%;
-    
 }
 
 .sub-menu--mega ul {
     padding: 0;
 }
 
-.sub-menu--mega li:hover{
+.sub-menu--mega > li:last-child {
+    flex-grow: 1;
+}
+
+.sub-menu--mega > li:hover{
     background-color: transparent;
     color: var(--gray-text);
 }
+
+.sub-menu--mega > li > a {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.sub-menu--mega > li:last-child > a {
+    height: 100%;
+    justify-content: center;
+}
+
+
 
