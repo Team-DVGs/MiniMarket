@@ -491,4 +491,9 @@ li:hover > .sub-menu--sub {
 }
 
 
+.footer{
+    color: white;
+    font-weight: 600;
+    background-color: var(--green-text);
+}
 
